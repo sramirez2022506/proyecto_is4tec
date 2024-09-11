@@ -1,0 +1,16 @@
+<div class="dog-container">
+    <h2>Random Dog Image</h2>
+    <img [src]="dogImageUrl" alt="Random Dog" width="300" />
+    <br />
+    <button (click)="getNewDogImg()">Get New Dog Image</button>
+  
+    <h3>Text Area</h3>
+    <textarea [(ngModel)]="textInput" rows="5" cols="30"></textarea>
+    
+    <div class="output-container">
+      <h4>Output without white spaces:</h4>
+      <div appWhiteSpaceDirective>{{ textInput }}</div>
+    </div>
+  </div>
+
+<p>dogs works!</p>
