@@ -1,0 +1,10 @@
+<div>
+    <img *ngIf="dogImageUrl" [src]="dogImageUrl" alt="Random Dog" />
+    <button (click)="loadRandomDogImg()">Get New Dog Image</button>
+  </div>
+  
+  <div>
+    <textarea (input)="onTextChange($event)"></textarea>
+    <div [appWhiteSpace]="textValue">{{ textValue }}</div>
+  </div>
+  

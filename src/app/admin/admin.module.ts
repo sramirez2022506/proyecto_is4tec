@@ -1,0 +1,25 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { AdminRoutingModule } from './admin-routing.module';
+import { DogsComponent } from './dogs/dogs.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DogsService } from './services/dogs.service';
+import { SharedModule } from '../shared/shared.module';
+
+
+@NgModule({
+  declarations: [
+    DogsComponent
+  ],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    SharedModule
+  ],
+  providers:[DogsService]
+})
+export class AdminModule { }
