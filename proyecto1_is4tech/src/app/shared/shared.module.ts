@@ -10,6 +10,9 @@ import { WhiteSpaceDirective } from './white-space.directive';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    WhiteSpaceDirective
   ]
 })
 export class SharedModule { }

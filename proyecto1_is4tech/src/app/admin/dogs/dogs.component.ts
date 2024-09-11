@@ -8,17 +8,21 @@ import { DogsService } from '../services/dogs.service';
 })
 export class DogsComponent {
   dogImageUrl: string ='';
-  textInput: string='';
+  textValue: string='';
 
   constructor(private dogsService: DogsService){}
 
   ngOnInit(): void{
-    this.getNewDogImg();
+    this.loadRandomDogImg();
   }
 
-  getNewDogImg(): void {
+  loadRandomDogImg(): void {
     this.dogsService.getRandomDogImage().subscribe(response =>{
       this.dogImageUrl = response.message;
     });
+  }
+
+  onTextChange(event: any): void {
+    this.textValue = event.target.value;
   }
 }
