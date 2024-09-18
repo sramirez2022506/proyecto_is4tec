@@ -1,18 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 import { WhiteSpaceDirective } from './white-space.directive';
 
 
-
 @NgModule({
-  declarations: [
-    WhiteSpaceDirective
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    WhiteSpaceDirective
-  ]
+    imports: [ReactiveFormsModule],
+    declarations: [WhiteSpaceDirective],
+    exports: [ReactiveFormsModule, WhiteSpaceDirective]
 })
-export class SharedModule { }
+
+export default class SharedModule { };

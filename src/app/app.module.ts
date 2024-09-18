@@ -3,19 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from './shared/shared.module';
-import { AdminModule } from './admin/admin.module';
+import SharedModule from './shared/shared.module';
+/* import { AdminModule } from './admin/admin.module'; */
 import { AppRoutingModule } from './app-routing.module';
+
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     SharedModule,
-    AdminModule,
+    /* AdminModule, */
     AppRoutingModule
   ],
   providers: [],
