@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DogsComponent } from './admin/dogs/dogs.component';
 
 const routes: Routes = [
-  { path: 'dogs', component: DogsComponent },
+  { path: 'dogs', loadChildren: () => import('./admin/dogs/dogs.module').then(m => m.DogsModule) },
   { path: '', redirectTo: '/dogs', pathMatch: 'full' } 
 ];
 
